@@ -14,10 +14,11 @@ const routes: Routes = [
     path: '',
     component: LoginComponent
   },
-	{
-		path: 'dashboard',
-		component: DashboardComponent
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   }
+]
   
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ const routes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule ,routing, FormsModule
+    BrowserModule, routing, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
