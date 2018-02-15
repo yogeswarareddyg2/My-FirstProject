@@ -1,4 +1,32 @@
-<p>
+<header>
   Welcome to login page 
-  <a [routerLink]="['/login']">Logout</a>
-</p>
+  <a class="col-sm-9 float-right" [routerLink]="['/login']">Logout</a>
+</header>
+<!-- <div class="section-wrpr bottom-space">
+    <div class="section-label box-border-bottom">
+        <div class="income-header">BASIC INFORMATION</div>
+    </div>
+    <div class="box-border-bottom row-view">
+        <!--form-group -->
+        <!-- <div class="col-sm-3 zero-padding-Right pushDown">
+            <label for="Demographic">Demographics</label>
+        </div>
+
+        
+        <div class="clearfix"></div>
+    </div>
+</div> -->
+<nav>
+<ul>
+    <li>
+        <a>Home</a> 
+    </li>
+    <li (click)="loginButton()">
+        <a>About</a>
+    </li>
+    <li>
+        <a>Contact</a>
+    </li>
+</ul>
+</nav>
+

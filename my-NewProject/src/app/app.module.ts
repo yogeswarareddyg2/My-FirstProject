@@ -7,6 +7,7 @@ import { AfterLoginComponentComponent } from './after-login-component/after-logi
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponentComponent } from './about-component/about-component.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     AfterLoginComponentComponent,
-    DashboardComponent
+    DashboardComponent,
+    AboutComponentComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
