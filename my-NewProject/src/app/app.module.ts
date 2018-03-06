@@ -8,7 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponentComponent } from './about-component/about-component.component';
-
+import { NewServiceService} from './new-service.service';
+import { HttpModule } from '@angular/http';
+import { HttpTestComponent } from './http-test/http-test.component';
+import { httpTestService } from './http-Test.service';
 
 const routes: Routes = [
   {
@@ -27,13 +30,17 @@ const routes: Routes = [
     LoginComponent,
     AfterLoginComponentComponent,
     DashboardComponent,
-    AboutComponentComponent
+    AboutComponentComponent,
+    HttpTestComponent,
+    
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule, routing, FormsModule
+    BrowserModule, routing, FormsModule, HttpModule
   ],
-  providers: [],
+  
+  providers: [NewServiceService, httpTestService],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
