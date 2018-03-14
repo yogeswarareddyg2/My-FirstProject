@@ -6,6 +6,8 @@ import { AfterLoginComponentComponent } from './after-login-component/after-logi
 import { AboutComponentComponent } from './about-component/about-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpTestComponent } from './http-test/http-test.component';
+import { CustomerDetailsComponent } from './http-test/customer-details/customer-details.component';
+import { ViewCustomerComponent } from './http-test/view-customer/view-customer.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,14 @@ const routes: Routes = [
 	{
 		path: 'httpTestComponent',
 		component: HttpTestComponent
+	},
+	{
+		path: 'customerDet',
+		component: CustomerDetailsComponent
+	}
+	{
+		path: 'viewCust',
+		component: ViewCustomerComponent
 	}
 
 ];

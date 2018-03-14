@@ -1,7 +1,8 @@
-<button (click)="onTestGet()"> Test Get Request</button><br>
+<!-- <button (click)="onTestGet()"> Test Get Request</button><br>
 <p>Output: {{getData}}</p>
 <button (click)="onTestPost()">Test Post Request</button><br>
-<p>Output: {{postData}}</p>
+<p>Output: {{postData}}</p> -->
+<!--<div class="section-wrpr bottom-space">
 <h3 (click)="onSelect()">{{contact.FirstName}}{{contact.LastName}}</h3>
 <input [(ngModel)]="contact.FirstName" type="text">
 <div *ngIf= "showDetail === true">Phone Numbber: {{contact.PhoneNumber}}<br>
@@ -25,4 +26,221 @@
     <input type="text" id = "email">
   </div>
   <button>Create Contact</button>
+</div>
+</div>-->
+<div class="col-md-9 content-box">
+
+  <div class="settingsPage-box">
+    <div class="box-border-bottom section-label">BASIC INFORMATION</div>
+    <div>
+
+      <div class="row-view box-border-bottom">
+        <div class="row">
+          <div class="col-sm-2 grid-block">
+            <div class="label-field">Details</div>
+          </div>
+          <div class="col-sm-4 grid-textField">
+            First Name
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-sm-4 grid-textField">
+            Middle Name
+            <input type="text" class="form-control" />
+          </div>
+<!-- 
+          <div class="col-sm-2 grid-block u-justifyEnd field-pd-left">
+            <span (click)="setBasicInfoMode(3);saveBasicInfoPart1();" class="btn-link" title="Save">Save</span>
+            <span class="button-section-divider"> | </span>
+            <span (click)="setBasicInfoMode(3);discardBasicInfoPart1();" class="btn-link" title="Cancel">Cancel</span>
+          </div> -->
+
+          <div class="clearfix"></div> 
+          <div class="col-sm-2 grid-textField">
+          </div>
+
+          <div class="col-sm-4 grid-textField">
+            Last Name
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-sm-4 grid-textField">
+            Sex
+            <select class="form-control" onchange="handlePregnancySelect(this)">
+              <option value="-1" selected>Select</option>
+              <option value="2">Male</option>
+              <option value="1">Female</option>
+              <option value="3">Other</option>
+            </select>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-sm-2 grid-textField">
+          </div>
+          <div class="col-sm-4 grid-textField">
+            Race
+            <select class="form-control">
+              <option value="-1" selected>Select</option>
+              <option value="1">American Indian/Alaskan Native</option>
+              <option value="2">Asian</option>
+              <option value="3">Black/African American</option>
+              <option value="4">Native Hawaiian/Pacific Islander</option>
+              <option value="5">White</option>
+            </select>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="row-view box-border-bottom">
+        <!--<div class="col-sm-3 grid-block">-->
+        <div class="label-field">Mailing Address</div>
+        <div class="col-sm-9 grid-block">
+        </div>
+        <div class="clearfix"></div>
+        <div class="mailing-address">
+          <div class="col-sm-2 grid-block">
+          </div>
+          <div class="col-sm-9 grid-block">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="grid-textField">
+                  <div class="sub-label">Line 1</div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="grid-textField">
+                  <div class="sub-label">line 2</div>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="grid-textField">
+                  <div class="sub-label">City</div>
+                  <input type="text" class="form-control">
+                  <!--placeholder="City"-->
+                </div>
+              </div>
+              <div class="col-sm-4 field-pd-left">
+                <div class="grid-textField">
+                  <div class="sub-label">ZipCode</div>
+                  <input type="text" class="form-control">
+                  <!--placeholder="Zip Code"-->
+                </div>
+              </div>
+              <div class="col-sm-4 field-pd-left">
+                <div class="grid-textField">
+                  <div class="sub-label">State</div>
+                  <select class="form-control">
+                    <option>Alaska</option>
+                    <option>Alabama</option>
+                    <option>Arkansas</option>
+                    <option>Arizona</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Canal Zone</option>
+                    <option>District of Columbia</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Guam</option>
+                    <option>Hawaii</option>
+                    <option>Iowa</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Massachusetts</option>
+                    <option value="MD" selected>Maryland</option>
+                    <option>Maine</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Missouri</option>
+                    <option>Mississippi</option>
+                    <option>Montana</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Nebraska</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>Nevada</option>
+                    <option>New York</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Puerto Rico</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Virginia</option>
+                    <option>Virgin Islands</option>
+                    <option>Vermont</option>
+                    <option>Washington</option>
+                    <option>Wisconsin</option>
+                    <option>West Virginia</option>
+                    <option>Wyoming</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="grid-textField">
+                  <select class="form-control">
+                    <option value="" selected>County</option>
+                    <option>Allegany</option>
+                    <option>Anne Arundel</option>
+                    <option>Baltimore</option>
+                    <option>Baltimore City</option>
+                    <option>Calvert</option>
+                    <option>Caroline</option>
+                    <option>Carroll</option>
+                    <option>Cecil</option>
+                    <option>Charles</option>
+                    <option>Dorchester</option>
+                    <option>Frederick</option>
+                    <option>Garrett</option>
+                    <option>Harford</option>
+                    <option>Howard</option>
+                    <option>Kent</option>
+                    <option>Montgomery</option>
+                    <option>Prince Georges</option>
+                    <option>Queen Annes</option>
+                    <option>Saint Marys</option>
+                    <option>Somerset</option>
+                    <option>Talbot</option>
+                    <option>Washington</option>
+                    <option>Wicomico</option>
+                    <option>Worcester</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 field-pd-left">
+                <div class="grid-textField">
+                  <select class="form-control">
+                    <option value="" selected>District</option>
+                    <option>Baltimore City</option>
+                    <option>Baltimore Region</option>
+                    <option>Eastern Shore</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btnWrapper">
+          <button class="btn cancel-btn btnMargingRt save-silver" (click)="saveDetail()">Save</button>
+          <button class="btn btn-primary btnMargingRt save-red" (click)="editDetail()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

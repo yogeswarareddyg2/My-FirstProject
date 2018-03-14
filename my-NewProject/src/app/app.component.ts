@@ -13,7 +13,7 @@ export class AppComponent {
     this.router.navigate(['aboutComponent']);  
   }
   homeButton() {
-    this.router.navigate(['httpTestComponent']);  
+    this.router.navigate(['customerDet']);  
   }
   directives: [HttpTestComponent]
 }

@@ -12,6 +12,8 @@ import { NewServiceService} from './new-service.service';
 import { HttpModule } from '@angular/http';
 import { HttpTestComponent } from './http-test/http-test.component';
 import { httpTestService } from './http-Test.service';
+import { CustomerDetailsComponent } from './http-test/customer-details/customer-details.component';
+import { ViewCustomerComponent } from './http-test/view-customer/view-customer.component';
 
 const routes: Routes = [
   {
@@ -32,11 +34,13 @@ const routes: Routes = [
     DashboardComponent,
     AboutComponentComponent,
     HttpTestComponent,
+    CustomerDetailsComponent,
+    ViewCustomerComponent,
     
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule, routing, FormsModule, HttpModule
+    BrowserModule, routing, FormsModule, HttpModule, 
   ],
   
   providers: [NewServiceService, httpTestService],

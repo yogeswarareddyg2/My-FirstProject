@@ -138,6 +138,12 @@ h6 {
   border: solid 1px #017fb5;
   background-color: #017fb5 !important;
 }
+.save-b {
+  width: 125px;
+  border-radius: 5px;
+  border: solid 1px #017fb5;
+  background-color: #017fb5 !important;
+}
 
 a {
   text-decoration: none;

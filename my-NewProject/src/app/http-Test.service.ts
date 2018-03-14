@@ -7,7 +7,7 @@ export class httpTestService {
   constructor(private http: Http) {}
   getCurrentTime (servers: any){
       return this.http.post('http://date.jsontest.com', servers);
-      .map(res => res.json())
+       .map(res => res.json())
   }
   postJSON(){
       var json = JSON.stringify({var1: 'test', var2: 3});
@@ -19,3 +19,4 @@ export class httpTestService {
       })
   }
 }
+ 
