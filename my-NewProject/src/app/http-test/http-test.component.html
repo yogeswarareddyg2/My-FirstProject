@@ -1,35 +1,5 @@
-<!-- <button (click)="onTestGet()"> Test Get Request</button><br>
-<p>Output: {{getData}}</p>
-<button (click)="onTestPost()">Test Post Request</button><br>
-<p>Output: {{postData}}</p> -->
-<!--<div class="section-wrpr bottom-space">
-<h3 (click)="onSelect()">{{contact.FirstName}}{{contact.LastName}}</h3>
-<input [(ngModel)]="contact.FirstName" type="text">
-<div *ngIf= "showDetail === true">Phone Numbber: {{contact.PhoneNumber}}<br>
-     email: {{contact.email}}
-</div>
-<div>
-  <div>
-    <label for="first-name">First Name:</label>
-    <input type="text" id = "first-name">
-  </div>
-  <div>
-    <label for="last-name">Last Name:</label>
-    <input type="text" id = "last-name">
-  </div>
-  <div>
-    <label for="phone">Phone Number:</label>
-    <input type="text" id = "phone">
-  </div>
-  <div>
-    <label for="femail">Email:</label>
-    <input type="text" id = "email">
-  </div>
-  <button>Create Contact</button>
-</div>
-</div>-->
+<form [formGroup]="loginForm" class="mx-5">
 <div class="col-md-9 content-box">
-
   <div class="settingsPage-box">
     <div class="box-border-bottom section-label">BASIC INFORMATION</div>
     <div>
@@ -41,11 +11,11 @@
           </div>
           <div class="col-sm-4 grid-textField">
             First Name
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" formControlName= "firstName" />
           </div>
           <div class="col-sm-4 grid-textField">
             Middle Name
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" formControlName= "middleName" />
           </div>
 <!-- 
           <div class="col-sm-2 grid-block u-justifyEnd field-pd-left">
@@ -60,11 +30,11 @@
 
           <div class="col-sm-4 grid-textField">
             Last Name
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" formControlName= "lastName" />
           </div>
           <div class="col-sm-4 grid-textField">
             Sex
-            <select class="form-control" onchange="handlePregnancySelect(this)">
+            <select class="form-control" formControlName="sex" onchange="handlePregnancySelect(this)">
               <option value="-1" selected>Select</option>
               <option value="2">Male</option>
               <option value="1">Female</option>
@@ -76,7 +46,7 @@
           </div>
           <div class="col-sm-4 grid-textField">
             Race
-            <select class="form-control">
+            <select class="form-control" formControlName="race">
               <option value="-1" selected>Select</option>
               <option value="1">American Indian/Alaskan Native</option>
               <option value="2">Asian</option>
@@ -102,7 +72,7 @@
               <div class="col-sm-12">
                 <div class="grid-textField">
                   <div class="sub-label">Line 1</div>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName= "firstLine">
                 </div>
               </div>
             </div>
@@ -110,7 +80,7 @@
               <div class="col-sm-12">
                 <div class="grid-textField">
                   <div class="sub-label">line 2</div>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName= "secondLine">
                 </div>
               </div>
             </div>
@@ -118,21 +88,21 @@
               <div class="col-sm-4">
                 <div class="grid-textField">
                   <div class="sub-label">City</div>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName= "city">
                   <!--placeholder="City"-->
                 </div>
               </div>
               <div class="col-sm-4 field-pd-left">
                 <div class="grid-textField">
                   <div class="sub-label">ZipCode</div>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" formControlName= "postalCode">
                   <!--placeholder="Zip Code"-->
                 </div>
               </div>
               <div class="col-sm-4 field-pd-left">
                 <div class="grid-textField">
                   <div class="sub-label">State</div>
-                  <select class="form-control">
+                  <select class="form-control" formControlName="state">
                     <option>Alaska</option>
                     <option>Alabama</option>
                     <option>Arkansas</option>
@@ -193,7 +163,7 @@
               </div>
               <div class="col-sm-6">
                 <div class="grid-textField">
-                  <select class="form-control">
+                  <select class="form-control" formControlName="country">
                     <option value="" selected>County</option>
                     <option>Allegany</option>
                     <option>Anne Arundel</option>
@@ -225,7 +195,7 @@
               </div>
               <div class="col-sm-6 field-pd-left">
                 <div class="grid-textField">
-                  <select class="form-control">
+                  <select class="form-control" formControlName="district">
                     <option value="" selected>District</option>
                     <option>Baltimore City</option>
                     <option>Baltimore Region</option>
@@ -238,9 +208,11 @@
         </div>
         <div class="btnWrapper">
           <button class="btn cancel-btn btnMargingRt save-silver" (click)="saveDetail()">Save</button>
-          <button class="btn btn-primary btnMargingRt save-red" (click)="editDetail()">Delete</button>
+          <!-- <button class="btn btn-primary btnMargingRt save-red" (click)="editDetail()">Delete</button> -->
         </div>
       </div>
     </div>
   </div>
 </div>
+</form>
+

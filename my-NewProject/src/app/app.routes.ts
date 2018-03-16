@@ -38,7 +38,7 @@ const routes: Routes = [
 	{
 		path: 'customerDet',
 		component: CustomerDetailsComponent
-	}
+	},
 	{
 		path: 'viewCust',
 		component: ViewCustomerComponent
